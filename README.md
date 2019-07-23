@@ -54,3 +54,9 @@ We'll deploy a sample app from [Fragmenta](https://fragmenta.eu/)
 ```
  localhost:3000
 ```
+
+# Contributors
+* Kent Ketter [Github](https://github.com/KKetter)
+* Paula Thomas [Github](https://github.com/Paula9t9)
+* Roger Huba [Github](https://github.com/RogerHuba)
+* Stephen Chu [Github](https://github.com/stephenchu530)
