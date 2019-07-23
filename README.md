@@ -3,8 +3,9 @@
 We'll deploy a sample app from [Fragmenta](https://fragmenta.eu/)
 
 ## Deploy to AWS
-
-
+```
+ TBD
+```
 
 ## Deploy Locally (MacOS)
 
