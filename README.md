@@ -32,7 +32,6 @@ We'll deploy a sample app from [Fragmenta](https://fragmenta.eu/)
 ```
 
 #### Install Fragmenta
-* Install Fragmenta
 ```
  go get -u github.com/fragmenta/fragmenta
 ```
