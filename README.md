@@ -54,6 +54,8 @@ We'll deploy a sample app from [Fragmenta](https://fragmenta.eu/)
 ```
  localhost:3000
 ```
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/stephenchu530/deployment-fragmenta/blob/master/LICENSE)
 
 # Contributors
 * Kent Ketter [Github](https://github.com/KKetter)
