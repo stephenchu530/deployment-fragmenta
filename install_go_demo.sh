@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 echo "Updating Ubuntu..."
-apt-get update
-apt-get -y upgrade
+sudo apt-get update
+sudo apt-get -y upgrade
 echo "Done"
 echo "Installing Postgresql..."
-apt-get -y install postgresql postgresql-contrib
+sudo apt-get -y install postgresql postgresql-contrib
 echo "Done"
 echo "Installing GO..."
 curl -O https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 tar xvf go1.10.3.linux-amd64.tar.gz
-chown -R root:root ./go
+sudo chown -R root:root ./go
 mv go /usr/local
 mkdir Projects
 mkdir Projects/Proj1
