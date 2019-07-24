@@ -51,7 +51,7 @@ Two main steps:
 * Enter the following:
 ```
  wget https://raw.githubusercontent.com/stephenchu530/deployment-fragmenta/master/install_go_demo.sh
- chmod r+x install_go_demo.sh
+ chmod +x install_go_demo.sh
  sudo ./install_go_demo.sh
 ```
 When you're ready, run the following at the prompt:
