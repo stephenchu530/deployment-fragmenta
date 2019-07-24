@@ -7,8 +7,10 @@ echo "Installing Postgresql..."
 sudo apt-get -y install postgresql postgresql-contrib
 echo "Done"
 echo "Installing GO..."
-echo "export GOPATH="${HOME}/.go"" >> ~/.profile
+echo "export GOPATH="${HOME}/.go" >> ~/.profile
+export GOPATH="${HOME}/.go
 echo "export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin" >> ~/.profile
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 curl -O https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
