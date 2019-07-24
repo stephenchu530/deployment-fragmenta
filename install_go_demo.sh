@@ -15,7 +15,7 @@ mkdir Projects
 mkdir Projects/Proj1
 echo "export GOROOT=/usr/local/go" >> ~/.profile
 echo "export GOPATH=$HOME/Projects/Proj1" >> ~/.profile
-echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> ~/.profile
+echo "export PATH=$GOPATH/bin:$GOROOT/bin:/usr/local/go/bin:$PATH" >> ~/.profile
 source ~/.profile
 rm go1.10.3.linux-amd64.tar.gz
 echo "Done"
