@@ -23,9 +23,11 @@ echo "Install Fragmenta..."
 go get -u github.com/fragmenta/fragmenta
 fragmenta new cms test
 cd test
-sudo -u postgres createuser ubuntu
-sudo -u postgres createdb ubuntu
+sudo -H -u postgres bash -c 'psql -c "\q"'
+echo "Enter ubuntu 'for' role and select 'y' to be superuser"
+sudo -u postgres createuser --interactive
+sudo -u postgres createdb sammy
 fragmenta migrate
-iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 3000
-iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
+sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 3000
+sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
 "Done"
