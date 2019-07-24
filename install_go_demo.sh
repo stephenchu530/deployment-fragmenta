@@ -24,7 +24,7 @@ go get -u github.com/fragmenta/fragmenta
 fragmenta new cms test
 cd test
 sudo -H -u postgres bash -c 'psql -c "\q"'
-echo "Enter ubuntu 'for' role and select 'y' to be superuser"
+echo "Enter 'ubuntu' for role and select 'y' to be superuser"
 sudo -u postgres createuser --interactive
 sudo -u postgres createdb sammy
 fragmenta migrate
