@@ -50,7 +50,7 @@ Two main steps:
 * At the prompt, type `yes` and hit enter. You are now in your server!
 * Enter the following:
 ```
- wget 
+ wget https://raw.githubusercontent.com/stephenchu530/deployment-fragmenta/master/install_go_demo.sh
  chmod r+x install_go_demo.sh
  sudo ./install_go_demo.sh
 ```
