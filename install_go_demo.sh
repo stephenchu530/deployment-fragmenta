@@ -10,18 +10,21 @@ echo "Installing GO..."
 curl -O https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 tar xvf go1.10.3.linux-amd64.tar.gz
 sudo chown -R root:root ./go
-mv go /usr/local
+sudo mv go /usr/local
 mkdir Projects
 mkdir Projects/Proj1
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/Projects/Proj1
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+echo "export GOROOT=/usr/local/go" >> ~/.profile
+echo "export GOPATH=$HOME/Projects/Proj1" >> ~/.profile
+echo "export PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> ~/.profile
+source ~/.profile
 rm go1.10.3.linux-amd64.tar.gz
 echo "Done"
 echo "Install Fragmenta..."
 go get -u github.com/fragmenta/fragmenta
 fragmenta new cms test
 cd test
+sudo -u postgres createuser ubuntu
+sudo -u postgres createdb ubuntu
 fragmenta migrate
 iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 3000
 iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
