@@ -11,9 +11,8 @@ curl -O https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 tar xvf go1.10.3.linux-amd64.tar.gz
 chown -R root:root ./go
 mv go /usr/local
-echo "export GOPATH=$HOME/work" >> ~/.profile
-echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
-source ~/.profile
+export GOPATH=$HOME/work
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 rm go1.10.3.linux-amd64.tar.gz
 echo "Done"
 echo "Install Fragmenta..."
